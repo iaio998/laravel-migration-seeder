@@ -77,4 +77,31 @@ composer install
 php artisan key:generate
 
 npm install
+
+# creo il database da phpmyadmin
+
+# inserisco i dati per il collegamento al db in env
+
+# creo migration
+php artisan make:migration create_nome_tabella_table
+php artisan make:migration update_users_table --table
+php artisan make:migration add_phone_number_to_users_table
+
+# lancio migration
+php artisan migrate
+
+#popolo il db
+php artisan make:seeder NomeTableSeeder
+
+# preparo le rotte file web.php es.
+Route::get('/books', [BookController::class, 'index'])->name('books.index');
+
+# creo controller
+php artisan make:controller NomeController
+
+#creo model
+php artisan make:model Nome
+
+# creo le views relative
+
 ```
