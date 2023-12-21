@@ -93,6 +93,8 @@ php artisan migrate
 #popolo il db
 php artisan make:seeder NomeTableSeeder
 
+php artisan db:seed --class=NomeTableSeeder
+
 # preparo le rotte file web.php es.
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
 
